@@ -3,8 +3,12 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        build(job: 'account-service', quietPeriod: 5)
+        build(quietPeriod: 5, job: 'account-service')
+        build 'customer-service'
       }
     }
+  }
+  environment {
+    Jenkinsfile = ''
   }
 }
