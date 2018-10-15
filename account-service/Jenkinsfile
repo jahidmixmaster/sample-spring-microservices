@@ -3,7 +3,7 @@
 //[code language="java"]
 node {
 
-    withMaven(maven:'maven') {
+    withMaven(maven:'maven_3_5_4') {
 
         stage('Checkout') {
             git url: 'https://github.com/saurabh0010/sample-spring-microservices.git', CredentialsID: 'github', branch: 'master'
